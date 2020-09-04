@@ -11,8 +11,7 @@ pipeline{
                 sh 'mvn -v'
             }
         }
-
-        stage('Build application'){
+        stage('Deploy application'){
             agent any
             steps{
                 sh 'mvn -v'

@@ -8,7 +8,10 @@ pipeline{
         stage('Build application'){
             agent any
             steps{
-                sh 'mvn -v'
+                sh 'mvn clean install'
+            }
+            post{
+                
             }
         }
         stage('Deploy application'){

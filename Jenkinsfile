@@ -42,7 +42,7 @@ pipeline{
         stage('Deploy application'){
             agent any
             steps{
-                sh 'mvn -v'
+                sh 'asadmin --port 4848 deploy --force --name calc-${DEPLOY_ENV} --contextroot calc-${DEPLOY_ENV} target/calc-jsf-1.0.war'
             }
         }
     }
